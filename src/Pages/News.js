@@ -29,17 +29,19 @@ const News = () => {
       ) : (
         <div class='row row-cols-1 row-cols-md-3 g-4'>
           {news.map((one) => {
-            return (
-              <SingleNews
-                key={one.url}
-                image={one.urlToImage}
-                title={one.title}
-                content={one.content}
-                description={one.description}
-                time={one.publishedAt}
-                mainlink={one.url}
-              />
-            )
+            if(one.urlToImage != null) {
+              return (
+                <SingleNews
+                  key={one.url}
+                  image={one.urlToImage}
+                  title={one.title}
+                  content={one.content}
+                  description={one.description}
+                  time={one.publishedAt}
+                  mainlink={one.url}
+                />
+              )
+            }
           })}
         </div>
       )}

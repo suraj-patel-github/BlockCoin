@@ -218,6 +218,10 @@ footer {
 }
 .card {
   box-shadow: 0 0 5px 5px #072227;
+  height: 40rem;
+}
+.card-img-top {
+  height: 20rem;
 }
 a {
   text-decoration: none;
